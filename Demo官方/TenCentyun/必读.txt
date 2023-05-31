@@ -1,0 +1,9 @@
+说明：
+	运行例程之前，请先确认当前使用的固件中是否存在 checkNet 库，可在命令行通过 help('modules') 查看。
+	如果当前使用的固件中没有 checkNet 库，请升级到至少 V06 版本固件并确认升级后的固件中有 checkNet 
+	库后，再运行本例程！
+	
+不升级固件运行例程的方法：
+	如果是V06之前的双文件系统版本（通过uos.listdir()命令可以看到usr、bak两个目录），由于缺少
+	checkNet库，所以需要用户手动将 checkNet.mpy 文件传到模块的 usr 目录下，然后打开例程代码，
+	将其中的 import checkNet 改为 from usr import checkNet，保存之后，即可将例程放到模块中运行。
